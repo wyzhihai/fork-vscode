@@ -135,7 +135,6 @@ steps:
     displayName: Setup NPM Authentication
 
   - powershell: |
-      $env:myvar = $(node print-path.js)
       . build/azure-pipelines/win32/exec.ps1
       . build/azure-pipelines/win32/retry.ps1
       $ErrorActionPreference = "Stop"
