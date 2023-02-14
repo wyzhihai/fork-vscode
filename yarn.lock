@@ -11433,6 +11433,14 @@ vscode-oniguruma@1.7.0:
   resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz#439bfad8fe71abd7798338d1cd3dc53a8beea94b"
   integrity sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==
 
+@vscode/policy-watcher@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@vscode/policy-watcher/-/@vscode/policy-watcher-1.1.1.tgz#3646d17de9f82c741437fd6d687fd0c414ea513d"
+  integrity sha512-ZwJKg8gpIQ3UO8gdTqBvbXJBOBUStWPArjQJuqGIz8TimgMy+4H7tScVjvlxmzb/sS6rErn3wGMn8gRH824nnw==
+  dependencies:
+    bindings "^1.5.0"
+    node-addon-api "*"
+
 vscode-proxy-agent@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/vscode-proxy-agent/-/vscode-proxy-agent-0.12.0.tgz#0775f464b9519b0c903da4dcf50851e1453f4e48"
