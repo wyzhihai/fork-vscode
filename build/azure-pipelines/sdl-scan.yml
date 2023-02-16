@@ -110,7 +110,7 @@ stages:
           - powershell: |
               . build/azure-pipelines/win32/exec.ps1
               $ErrorActionPreference = "Stop"
-              exec { yarn install node-gyp@https://github.com/rzhao271/node-gyp.git#bafdb6a8d59515dda457776b86ced0bc1d14d91a }
+              exec { npm install -g node-gyp@https://github.com/rzhao271/node-gyp.git#bafdb6a8d59515dda457776b86ced0bc1d14d91a }
             env:
               npm_config_arch: "$(NPM_ARCH)"
               GITHUB_TOKEN: "$(github-distro-mixin-password)"
@@ -120,6 +120,7 @@ stages:
           - powershell: |
               . build/azure-pipelines/win32/exec.ps1
               . build/azure-pipelines/win32/retry.ps1
+              $env:npm_config_node_gyp = $(Join-Path $(Get-Command node-gyp.cmd).Path "..\node_modules\node-gyp\bin\node-gyp.js" -Resolve)
               $ErrorActionPreference = "Stop"
               retry { exec { yarn --frozen-lockfile --check-files } }
             env:
